@@ -28,7 +28,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ActSMS"
-        tools:targetApi="31">
+        android:enableOnBackInvokedCallback="true"
+        tools:targetApi="34">
+        
+        <!-- 16 KB page size support for Android 15+ (Required from Nov 1, 2025) -->
+        <property
+            android:name="android.app.PROPERTY_SUPPORT_16KB_PAGE_SIZE"
+            android:value="true" />
         
         <!-- Main Activity -->
         <activity
@@ -44,7 +50,7 @@
 
         <!-- SMS Receiver -->
         <receiver
-            android:name=".data.receiver.SmsReceiver"
+            android:name=".receiver.SmsReceiver"
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.BROADCAST_SMS">

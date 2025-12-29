@@ -17,7 +17,7 @@ gen/
 out/
 .gradle/
 build/
-local.properties
+
 *.log
 *.nav
 *.orig
@@ -38,3 +38,8 @@ local.properties
 .factorypath
 .springBeans
 .sts4-cache/
+
+# Keystore files (NEVER commit these!)
+*.jks
+*.keystore
+keystore.properties

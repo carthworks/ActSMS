@@ -1,7 +1,13 @@
 package com.actsms.app.di
 
 import com.actsms.app.data.repository.ActionRepositoryImpl
+import com.actsms.app.data.repository.ParsingRepositoryImpl
+import com.actsms.app.data.repository.PreferencesRepositoryImpl
+import com.actsms.app.data.repository.SmsRepositoryImpl
 import com.actsms.app.domain.repository.ActionRepository
+import com.actsms.app.domain.repository.ParsingRepository
+import com.actsms.app.domain.repository.PreferencesRepository
+import com.actsms.app.domain.repository.SmsRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -21,16 +27,21 @@ abstract class RepositoryModule {
         impl: ActionRepositoryImpl
     ): ActionRepository
 
-    // Add other repository bindings as they are implemented
-    // @Binds
-    // @Singleton
-    // abstract fun bindSmsRepository(impl: SmsRepositoryImpl): SmsRepository
+    @Binds
+    @Singleton
+    abstract fun bindSmsRepository(
+        impl: SmsRepositoryImpl
+    ): SmsRepository
     
-    // @Binds
-    // @Singleton
-    // abstract fun bindParsingRepository(impl: ParsingRepositoryImpl): ParsingRepository
+    @Binds
+    @Singleton
+    abstract fun bindParsingRepository(
+        impl: ParsingRepositoryImpl
+    ): ParsingRepository
     
-    // @Binds
-    // @Singleton
-    // abstract fun bindPreferencesRepository(impl: PreferencesRepositoryImpl): PreferencesRepository
+    @Binds
+    @Singleton
+    abstract fun bindPreferencesRepository(
+        impl: PreferencesRepositoryImpl
+    ): PreferencesRepository
 }

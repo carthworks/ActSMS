@@ -25,6 +25,22 @@ android {
         ksp {
             arg("room.schemaLocation", "$projectDir/schemas")
         }
+
+        // Enable 16 KB page size support for Android 15+ (Required from Nov 1, 2025)
+        // This ensures compatibility with devices using 16 KB memory pages
+        ndk {
+            //noinspection ChromeOsAbiSupport
+            abiFilters += listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
+        }
+        
+        // Explicitly support both 4 KB and 16 KB page sizes
+        externalNativeBuild {
+            cmake {
+                arguments += listOf(
+                    "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
+                )
+            }
+        }
     }
 
     buildTypes {
@@ -68,6 +84,9 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+        jniLibs {
+            useLegacyPackaging = false
         }
     }
 
@@ -128,6 +147,8 @@ dependencies {
 
     // Accompanist (for permissions)
     implementation("com.google.accompanist:accompanist-permissions:0.32.0")
+
+    implementation("com.google.android.material:material:1.11.0")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
