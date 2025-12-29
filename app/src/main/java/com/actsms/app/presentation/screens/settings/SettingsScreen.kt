@@ -70,7 +70,7 @@ fun SettingsScreen(
                         color = MaterialTheme.colorScheme.onPrimaryContainer
                     )
                     Text(
-                        text = "We're working on bringing you powerful customization options!",
+                        text = "We're  workings on bringing you powerful customization options!",
                         style = MaterialTheme.typography.bodyLarge,
                         color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.7f)
                     )
