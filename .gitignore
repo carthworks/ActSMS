@@ -55,6 +55,13 @@ out/
 *.nav
 *.orig
 
+# Archives (don't commit build artifacts)
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
 # ===========================
 # OS Files
 # ===========================
