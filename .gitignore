@@ -1,33 +1,86 @@
-.gradle
-.idea
-*.iml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+# ===========================
+# Android / Gradle
+# ===========================
 *.apk
 *.aab
 *.ap_
 *.dex
-*.class
+.gradle/
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+
+# ===========================
+# Android Studio / IntelliJ
+# ===========================
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/navEditor.xml
+.idea/deploymentTargetDropDown.xml
+.idea/render.experimental.xml
+
+# ===========================
+# Keystore & Secrets (CRITICAL!)
+# ===========================
+*.jks
+*.keystore
+keystore.properties
+google-services.json
+secrets.properties
+signing.properties
+
+# ===========================
+# Generated Files
+# ===========================
 bin/
 gen/
 out/
-.gradle/
-build/
-
+*.class
 *.log
 *.nav
 *.orig
-*.pyc
-*.swp
-*~
-*.med 
-!README.md 
-!LICENSE
 
+# ===========================
+# OS Files
+# ===========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# ===========================
+# Backup & Temporary Files
+# ===========================
+*.swp
+*.bak
+*.tmp
+*.temp
+*~.nib
+*.pyc
+*.med
+
+# ===========================
+# Eclipse (if used)
+# ===========================
 .metadata
 .recommenders
 .settings/
@@ -39,7 +92,91 @@ build/
 .springBeans
 .sts4-cache/
 
-# Keystore files (NEVER commit these!)
-*.jks
-*.keystore
-keystore.properties
+# ===========================
+# NDK
+# ===========================
+obj/
+.externalNativeBuild/
+
+# ===========================
+# Kotlin
+# ===========================
+.kotlin/
+
+# ===========================
+# Version Control
+# ===========================
+.svn/
+.hg/
+.bzr/
+
+# ===========================
+# Testing
+# ===========================
+/test-results/
+/androidTest-results/
+*.hprof
+
+# ===========================
+# Lint
+# ===========================
+lint/
+lint-results.xml
+lint-results_files/
+
+# ===========================
+# Firebase
+# ===========================
+google-services.json
+firebase-debug.log
+firebase-debug.*.log
+
+# ===========================
+# Fastlane
+# ===========================
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/readme.md
+
+# ===========================
+# Freeline
+# ===========================
+freeline.py
+freeline/
+freeline_project_description.json
+
+# ===========================
+# Room Database Schemas
+# ===========================
+# Keep schemas for version control
+!app/schemas/
+
+# ===========================
+# Documentation (Keep these!)
+# ===========================
+!README.md
+!LICENSE
+!CHANGELOG.md
+!CONTRIBUTING.md
+!CODE_OF_CONDUCT.md
+!*.md
+
+# ===========================
+# CI/CD
+# ===========================
+.circleci/
+.travis.yml
+
+# ===========================
+# Package Managers
+# ===========================
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ===========================
+# Custom Project Exclusions
+# ===========================
+# Add project-specific ignores below
