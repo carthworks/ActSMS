@@ -37,6 +37,7 @@
         android:allowBackup="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
         android:extractNativeLibs="false"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
@@ -44,6 +45,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ActSMS" >
+
+        <!-- 16 KB page size support for Android 15+ (Required from Nov 1, 2025) -->
+        <property
+            android:name="android.app.PROPERTY_SUPPORT_16KB_PAGE_SIZE"
+            android:value="true" />
 
         <!-- Main Activity -->
         <activity
